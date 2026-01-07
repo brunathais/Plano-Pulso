@@ -2,6 +2,7 @@ import { useState } from "react";
 // import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import Week from "./pages/Week";
+import TasksPage from "./pages/TasksPage";
 
 export default function App() {
 
@@ -36,6 +37,8 @@ export default function App() {
       <Dashboard></Dashboard>
 
       <Week></Week>
+
+      <TasksPage></TasksPage>
     </>
   );
 }
