@@ -3,9 +3,11 @@ import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import Week from "./pages/Week";
 import TasksPage from "./pages/TasksPage";
+import Page from "./pages/Page";
+import Header from "./pages/Header";
+import PlannerPage from "./pages/PlannerPage";
 
 export default function App() {
-
   const [result, setResult] = useState<string>("");
 
   async function testApi() {
@@ -29,7 +31,6 @@ export default function App() {
 
   return (
     <>
-
       <button onClick={testApi}>testar API</button>
 
       <pre>Usando o pre: {result} </pre>
@@ -39,6 +40,11 @@ export default function App() {
       <Week></Week>
 
       <TasksPage></TasksPage>
+
+      <Page>
+        <Header></Header>
+        <PlannerPage></PlannerPage>
+      </Page>
     </>
   );
 }
